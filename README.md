@@ -4,7 +4,7 @@ FuzzPy is a Simple and Basic Library writing in python3, and aims to simple the 
 #### Usage 
 Usage of the Library is Very Simple and it can be used just in few lines 
 ```
-from fuzzpylib import Crawler as cr 
+from fuzzpylib import Crawler
 TARGET ='blablabla.com'
 a = Crawler(TARGET , crawl_level = 2)
 data = a.launch()
@@ -15,7 +15,7 @@ also the data in which is returned is a Dictionary in which there are two Keys
   - 'internal'
   
 ```
-from fuzzpylib import Crawler as cr 
+from fuzzpylib import Crawler
 TARGET ='blablabla.com'
 a = Crawler(YOUR_TAGET , crawl_level = 2 , thread_num = 10 , user_agent = "YOUR USER AGENT" , moderator = None ,
 			 exclude = None , timeout = 10)
