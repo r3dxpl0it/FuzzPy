@@ -36,7 +36,7 @@ warnings.filterwarnings('ignore') # Disable SSL related warnings
 class Crawler : 
 	def __init__ (self , target , crawl_level = 2 , 
 			 thread_num = 2 , user_agent = None , moderator = None , additional_seed = list() ,
-			 exclude = None , timeout = 10): 
+			 exclude = None , timeout = 10 , verbose = False): 
 		self.internal = set()
 		self.processed = self.files = set()
 		self.exclude = exclude
@@ -44,7 +44,7 @@ class Crawler :
 		self.timeout = timeout
 		self.archive = False
 		self.fuzzable = set()
-
+		self.verbose = verbose 
 		self.target = self.__url_formatter__(target)
 		self.host = urlparse(self.target).netloc 
 		self.internal.add(self.target)
@@ -144,7 +144,7 @@ class Crawler :
 		time.sleep(self.timeout) 
 		headers = {
 		'Host' : self.host, 
-		'User-Agent' : random.choice(self.user_agent), # selecting a random user-agent
+		'User-Agent' : random.choice(self.user_agent),
 		'Accept' : 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8',
 		'Accept-Language' : 'en-US,en;q=0.5',
 		'Accept-Encoding' : 'gzip',
@@ -157,10 +157,10 @@ class Crawler :
 				return response.text
 			else:
 				response.close()
-				return 'dummy'
+				return 'jimmy'
 		else:
 			response.close()
-			return 'dummy'
+			return 'jimmy'
 	def extractor(self , url):
 		response = self.requester(url)
 		print(response)
