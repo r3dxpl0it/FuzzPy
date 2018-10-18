@@ -1,4 +1,4 @@
-##### FuzzPy
+### FuzzPy
 FuzzPy is a Simple and Basic Library writing in python3, and aims to simple the action of finding Urls with Parameter for Enumartion Step in Pen-Testing for specific Scope. The Original Code and Tool has Been Developed Under the Name of Photon "https://github.com/s0md3v/Photon" . i Should also Refrence that the module SCARPY "https://scrapy.org/"  is also Another Powerfull Library that also includes a pythonic Spider/Crawler but the use of this Simple Library is Only and Only for Development the "Scoped-Base Penetration Testing Tools". 
 
 #### Usage 
