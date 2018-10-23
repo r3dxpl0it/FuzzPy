@@ -129,7 +129,7 @@ class Crawler :
 		futures = (threadpool.submit(function, link) for link in links)
 		for i, _ in enumerate(concurrent.futures.as_completed(futures)):
 			if i + 1 == len(links) or (i + 1) % thread_count == 0:
-				self.mod('%s Progress: %i/%i' % (info, i + 1, len(links)), end='\r')
+				self.mod('Progress: %i/%i' % (i + 1, len(links)), end='\r')
 	def is_link(self , url):
 		conclusion = False 
 		if url not in self.processed: 
